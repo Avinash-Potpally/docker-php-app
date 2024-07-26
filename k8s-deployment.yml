@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: php-app-deployment
+  namespace: avin-development
   labels:
     app: php-app
 spec:
@@ -24,6 +25,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: php-app-service
+  namespace: avin-development
 spec:
   selector:
     app: php-app
