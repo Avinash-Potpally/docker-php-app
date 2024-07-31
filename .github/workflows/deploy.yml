@@ -30,7 +30,7 @@ jobs:
       run: az aks get-credentials --resource-group avin-tf-rg --name avin-tf-aks
       
     - name: Create ACR secret
-     run: kubectl create secret docker-registry acr-secret --docker-server=avinacr.azurecr.io --docker-username=avinacr --docker-password=tULqKVg3GnYylhrracAOHznhoI/GmpQlGE82ZPVtRl+ACRAtfuNK --docker-email=anise.avinash@gmail.com --namespace=avin-development
+      run: kubectl create secret docker-registry acr-secret --docker-server=avinacr.azurecr.io --docker-username=avinacr --docker-password=tULqKVg3GnYylhrracAOHznhoI/GmpQlGE82ZPVtRl+ACRAtfuNK --docker-email=anise.avinash@gmail.com --namespace=avin-development
      
     - name: Define Ingress
       run: kubectl apply -f ingress.yaml
