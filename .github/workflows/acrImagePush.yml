@@ -19,7 +19,7 @@ jobs:
       with:
         login-server: avinacr.azurecr.io
         username: avinacr
-        password: NjZQiy9eEaj52/5FtZTfyDhJlsfmjnSQ+/WEnytjWh+ACRCZZ8+2
+        password: tULqKVg3GnYylhrracAOHznhoI/GmpQlGE82ZPVtRl+ACRAtfuNK
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
