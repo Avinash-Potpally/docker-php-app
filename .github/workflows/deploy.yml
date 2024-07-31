@@ -30,4 +30,6 @@ jobs:
       run: az aks get-credentials --resource-group avin-tf-rg --name avin-tf-aks
 
     - name: Deploy to Kubernetes
-      run: kubectl apply -f k8s-deployment.yml
+      run: |
+          kubectl apply -f ingress.yaml
+          kubectl apply -f k8s-deployment.yml
