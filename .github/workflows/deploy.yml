@@ -33,7 +33,7 @@ jobs:
       run: kubectl create secret docker-registry acr-secret --docker-server=avinacr.azurecr.io --docker-username=avinacr --docker-password=tULqKVg3GnYylhrracAOHznhoI/GmpQlGE82ZPVtRl+ACRAtfuNK --docker-email=anise.avinash@gmail.com --namespace=avin-development
      
     - name: Define Ingress
-      run: kubectl apply -f ingress.yaml
+      run: kubectl apply -f ingress.yml
       
     - name: Deploy to Kubernetes
       run: kubectl apply -f k8s-deployment.yml
