@@ -19,7 +19,7 @@ spec:
       - name: php-app
         image: avinacr.azurecr.io/php-app:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
       imagePullSecrets:
       - name: acr-secret
 ---
@@ -33,6 +33,5 @@ spec:
     app: php-app
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80
-  type: LoadBalancer
+    port: 3200
+    targetPort: 3000

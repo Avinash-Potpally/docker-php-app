@@ -4,7 +4,7 @@ metadata:
   name: avi-integrations-php-runtime
   namespace: avin-development
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+     kubernetes.io/ingress.class: nginx
 spec:
   rules:
   - host: tf.nonprd.avin.com
@@ -14,6 +14,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: avi-integrations-php-runtime
+            name: php-app-service
             port:
-              number: 8081
+              number: 3200
