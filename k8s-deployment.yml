@@ -19,7 +19,7 @@ spec:
       - name: php-app
         image: avinacr.azurecr.io/php-app:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
       imagePullSecrets:
       - name: acr-secret
 ---
@@ -33,6 +33,4 @@ spec:
     app: php-app
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 8080
-    nodePort: 30010
+    port: 8081
