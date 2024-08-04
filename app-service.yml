@@ -3,6 +3,7 @@
   kind: Service
   metadata:
     name: php-app-service
+    namespace: default
   spec:
     type: LoadBalancer
     selector:
@@ -11,4 +12,4 @@
       - name: http
         protocol: TCP
         port: 80
-        targetPort: 9376
+        targetPort: 8080
