@@ -55,4 +55,4 @@ jobs:
       
     - name: Deploy to Kubernetes
       if: ${{ github.event.inputs.k8s-deployment-file }}
-      run: kubectl apply -f k8s-deployment.yml
+       run: kubectl apply -f k8s-deployment.yml
