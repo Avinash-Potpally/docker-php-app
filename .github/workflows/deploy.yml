@@ -2,6 +2,22 @@ name: Deploy to Kubernetes
 
 on:
   workflow_dispatch:
+    inputs:
+      k8s-deployment-file:
+        description: 'Kubernetes Deployment file'
+        required: true
+        type: boolean
+        default: false
+      ingress-file:
+        description: 'Kubernetes ingress file'
+        required: true
+        type: boolean
+        default: false
+      service-file:
+        description: 'Kubernetes service file'
+        required: true
+        type: boolean
+        default: false
 
 jobs:
   deploy:
@@ -29,8 +45,14 @@ jobs:
     - name: Set up AKS credentials
       run: az aks get-credentials --resource-group avin-tf-rg --name avin-tf-aks
      
-    # - name: Define Ingress
-    #   run: kubectl apply -f ingress.yml
+    - name: Define Service
+      if: ${{ github.event.inputs.service-file }}
+       run: kubectl apply -f app-service.yml
+
+    - name: Define Ingress
+      if: ${{ github.event.inputs.ingress-file }}
+       run: kubectl apply -f ingress.yml
       
     - name: Deploy to Kubernetes
+      if: ${{ github.event.inputs.k8s-deployment-file }}
       run: kubectl apply -f k8s-deployment.yml
