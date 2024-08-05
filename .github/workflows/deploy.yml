@@ -49,9 +49,8 @@ jobs:
       if: ${{ github.event.inputs.service-file }}
       run: kubectl apply -f app-service.yml
 
-    - name: Define Ingress
-      if: ${{ github.event.inputs.ingress-file }}
-      run: kubectl apply -f ingress.yml
+    #- name: Define Ingress
+    #  run: kubectl apply -f ingress.yml
       
     - name: Deploy to Kubernetes
       if: ${{ github.event.inputs.k8s-deployment-file }}

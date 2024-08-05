@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php-app-deployment
+  name: php-app
   namespace: avin-development
   labels:
     app: php-app
