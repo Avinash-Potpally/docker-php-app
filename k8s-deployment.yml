@@ -19,6 +19,6 @@ spec:
       - name: php-app
         image: avinacr.azurecr.io/php-app:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
       imagePullSecrets:
       - name: acr-secret
