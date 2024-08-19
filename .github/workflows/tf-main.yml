@@ -31,6 +31,7 @@ jobs:
       with:
         creds: '{
           "clientId": "36ffaa78-8a23-4b13-a58f-dbf35e74818f",
+          "clientSecret": "17QGWRm2BXjqmL2mgeqVqXT-z7_DS5~sTo",
           "subscriptionId": "267792e5-47b0-4a0f-ab38-666ea8d90ed7",
           "tenantId": "6315fddc-01d3-43ed-a687-195101704294"
         }'
