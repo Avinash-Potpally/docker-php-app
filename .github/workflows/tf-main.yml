@@ -55,4 +55,4 @@ jobs:
 
     - name: Destroy Terraform
       continue-on-error: true
-      run: terraform apply -input=false -no-color -auto-approve -var "client_id=${{ env.AZURE_CLIENT_ID }}" -var "client_secret=${{ env.AZURE_CLIENT_SECRET }}" -var "subscription_id=${{ env.AZURE_SUBSCRIPTION_ID }}" -var "tenant_id=${{ env.AZURE_TENANT_ID }}"
+      run: terraform destroy -input=false -no-color -auto-approve -var "client_id=${{ env.AZURE_CLIENT_ID }}" -var "client_secret=${{ env.AZURE_CLIENT_SECRET }}" -var "subscription_id=${{ env.AZURE_SUBSCRIPTION_ID }}" -var "tenant_id=${{ env.AZURE_TENANT_ID }}"
